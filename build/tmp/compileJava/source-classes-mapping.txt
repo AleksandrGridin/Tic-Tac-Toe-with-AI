@@ -8,11 +8,11 @@ tictactoe/players/Level.java
  tictactoe.players.Level
 tictactoe/players/PlayerHuman.java
  tictactoe.players.PlayerHuman
+tictactoe/Game.java
+ tictactoe.Game
+tictactoe/players/Player.java
+ tictactoe.players.Player
 tictactoe/Main.java
  tictactoe.Main
 tictactoe/players/PlayerAI.java
  tictactoe.players.PlayerAI
-tictactoe/players/Player.java
- tictactoe.players.Player
-tictactoe/Game.java
- tictactoe.Game

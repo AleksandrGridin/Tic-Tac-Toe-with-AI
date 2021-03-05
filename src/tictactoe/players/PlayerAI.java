@@ -6,7 +6,7 @@ public class PlayerAI extends Player {
 
     private Level level;
     private Random random = new Random();
-    private char valueO = 'O';
+    private char valueO;
 
     public PlayerAI(Level level) {
         this.level = level;
@@ -16,10 +16,14 @@ public class PlayerAI extends Player {
         return valueO;
     }
 
+    public void setValue(char valueO) {
+        this.valueO = valueO;
+    }
+
     public int[] doStep() {
         System.out.println("Making move level \"easy\"");
-        int one = random.nextInt(3);
-        int two = random.nextInt(3);
+        int one = (random.nextInt(3) + 1) -1;
+        int two = (random.nextInt(3) + 1) -1;
         return new int[] {one, two};
     }
 

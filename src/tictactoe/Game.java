@@ -7,27 +7,28 @@ import tictactoe.players.PlayerHuman;
 
 public class Game {
 
-    private GameField gameField;
-    private final Console console;
-    private CheckerOfWin checkerOfWin;
-    private PlayerHuman playerHuman;
-    private PlayerAI playerAI;
+    private GameField gameField = new GameField();
+    private Player playerOne;
+    private Player playerTwo;
     private Player currentPlayer;
 
+    private final Console console;
+    private CheckerOfWin checkerOfWin;
 
-    public Game(GameField gameField, Console console) {
-        this.gameField = gameField;
+
+
+    public Game(Console console, Player playerOne, Player playerTwo) {
         this.console = console;
+        this.playerOne = playerOne;
+        this.playerTwo = playerTwo;
         checkerOfWin = new CheckerOfWin(gameField);
-        playerHuman = new PlayerHuman(console);
-        playerAI = new PlayerAI(Level.EASY);
     }
 
     public void startGame() {
         int i = 1;
         while (true) {
             try {
-               currentPlayer = i % 2 == 0 ? playerAI : playerHuman;
+               currentPlayer = i % 2 == 0 ? playerTwo : playerOne;
 
                int[] getStepFromPlayer = currentPlayer.doStep();
                int one = getStepFromPlayer[0];
