@@ -1,45 +1,53 @@
 package tictactoe;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import tictactoe.players.Level;
+import tictactoe.players.Player;
+import tictactoe.players.PlayerAI;
+import tictactoe.players.PlayerHuman;
 
 public class Game {
 
-    private final GameField gameField;
+    private GameField gameField;
     private final Console console;
-    private boolean isWin = false;
+    private CheckerOfWin checkerOfWin;
+    private PlayerHuman playerHuman;
+    private PlayerAI playerAI;
+    private Player currentPlayer;
+
 
     public Game(GameField gameField, Console console) {
         this.gameField = gameField;
         this.console = console;
+        checkerOfWin = new CheckerOfWin(gameField);
+        playerHuman = new PlayerHuman(console);
+        playerAI = new PlayerAI(Level.EASY);
     }
 
-    public void doStep() {
-
+    public void startGame() {
+        int i = 1;
         while (true) {
-            System.out.print("Enter the coordinates: ");
-            String[] line = console.readFromConsole().split(" ");
             try {
-                int one = Integer.parseInt(line[0]) - 1;
-                int two = Integer.parseInt(line[1]) - 1;
+               currentPlayer = i % 2 == 0 ? playerAI : playerHuman;
 
-                if (gameField.getGameField()[one][two] == '_') {
-                    gameField.getCountXandO();
-                    gameField.getGameField()[one][two] =
-                            gameField.getCountX() == gameField.getCountO() ? 'X' : 'O';
+               int[] getStepFromPlayer = currentPlayer.doStep();
+               int one = getStepFromPlayer[0];
+               int two = getStepFromPlayer[1];
 
+               if (gameField.getGameField()[one][two] == ' ') {
+                    gameField.getGameField()[one][two] = currentPlayer.getValue();
+                    gameField.print();
+                    if (checkerOfWin.checkResult()) {
+                        break;
+                    }
                 } else {
                     System.out.println("This cell is occupied! Choose another one!");
                     continue;
                 }
-                gameField.print();
-                if (checkResult(gameField.getGameField())) {
-
-                } else {
-                    System.out.println("Game not finished");
+                i++;
+                if (i == 10) {
+                    System.out.println("Draw");
+                    break;
                 }
-                break;
             } catch (IndexOutOfBoundsException e) {
                 System.out.println("Coordinates should be from 1 to 3!");
             } catch (NumberFormatException e) {
@@ -47,28 +55,4 @@ public class Game {
             }
         }
     }
-    //TODO change it
-    private static boolean checkResult(char[][] grid) {
-        List<String> list = new ArrayList<>();
-        list.add(String.valueOf(grid[0][0]) + grid[0][1] + grid[0][2]);
-        list.add(String.valueOf(grid[1][0]) + grid[1][1] + grid[1][2]);
-        list.add(String.valueOf(grid[2][0]) + grid[2][1] + grid[2][2]);
-        list.add(String.valueOf(grid[0][0]) + grid[1][0] + grid[2][0]);
-        list.add(String.valueOf(grid[0][1]) + grid[1][1] + grid[2][1]);
-        list.add(String.valueOf(grid[0][2]) + grid[1][2] + grid[2][2]);
-        list.add(String.valueOf(grid[0][0]) + grid[1][1] + grid[2][2]);
-        list.add(String.valueOf(grid[0][2]) + grid[1][1] + grid[2][0]);
-
-        String result = "";
-        boolean truResult = false;
-        for (String r : list) {
-            if (r.equals("XXX") || r.equals("OOO")) {
-                result = r;
-                truResult = true;
-                System.out.println(result.charAt(0) +" wins");
-            }
-        }
-        return truResult;
-    }
-
 }

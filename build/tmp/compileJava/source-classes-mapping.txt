@@ -1,8 +1,18 @@
-tictactoe/Main.java
- tictactoe.Main
-tictactoe/GameField.java
- tictactoe.GameField
 tictactoe/Console.java
  tictactoe.Console
+tictactoe/CheckerOfWin.java
+ tictactoe.CheckerOfWin
+tictactoe/GameField.java
+ tictactoe.GameField
+tictactoe/players/Level.java
+ tictactoe.players.Level
+tictactoe/players/PlayerHuman.java
+ tictactoe.players.PlayerHuman
+tictactoe/Main.java
+ tictactoe.Main
+tictactoe/players/PlayerAI.java
+ tictactoe.players.PlayerAI
+tictactoe/players/Player.java
+ tictactoe.players.Player
 tictactoe/Game.java
  tictactoe.Game
