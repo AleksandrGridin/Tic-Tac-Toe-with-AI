@@ -25,6 +25,14 @@ public class Game {
     }
 
     public void startGame() {
+        if (playerOne instanceof PlayerAI) {
+            ((PlayerAI) playerOne).setGameField(gameField);
+            ((PlayerAI) playerOne).setCheckerOfWin(checkerOfWin);
+        }
+        if (playerTwo instanceof PlayerAI) {
+            ((PlayerAI) playerTwo).setCheckerOfWin(checkerOfWin);
+            ((PlayerAI) playerTwo).setGameField(gameField);
+        }
         int i = 1;
         while (true) {
             try {
@@ -34,10 +42,12 @@ public class Game {
                int one = getStepFromPlayer[0];
                int two = getStepFromPlayer[1];
 
+
                if (gameField.getGameField()[one][two] == ' ') {
                     gameField.getGameField()[one][two] = currentPlayer.getValue();
                     gameField.print();
                     if (checkerOfWin.checkResult()) {
+                        System.out.println(currentPlayer.getValue() + " wins");
                         break;
                     }
                 } else {

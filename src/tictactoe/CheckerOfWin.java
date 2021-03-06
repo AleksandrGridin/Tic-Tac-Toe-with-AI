@@ -14,7 +14,7 @@ public class CheckerOfWin {
         for (char[] chars : gameField.getGameField()) {
             String line = String.copyValueOf(chars);
             if (line.equals("XXX") || line.equals("OOO")) {
-                System.out.println(line.charAt(0) + " wins");
+                //System.out.println(line.charAt(0) + " wins");
                 return true;
             }
         }
@@ -32,7 +32,7 @@ public class CheckerOfWin {
             }
             if (lineO[i] == line1[i]
                     && lineO[i] == line2[i]) {
-                System.out.println(lineO[i] + " wins");
+                //System.out.println(lineO[i] + " wins");
                 return true;
             }
         }
@@ -45,7 +45,7 @@ public class CheckerOfWin {
                 && gameField.getGameField()[0][0]
                 == gameField.getGameField()[2][2]) {
             if (gameField.getGameField()[0][0] != ' ') {
-                System.out.println(gameField.getGameField()[0][0] + " wins");
+                //System.out.println(gameField.getGameField()[0][0] + " wins");
                 return true;
             }
         }
@@ -54,7 +54,7 @@ public class CheckerOfWin {
                 && gameField.getGameField()[0][2]
                 == gameField.getGameField()[2][0]) {
             if (gameField.getGameField()[0][2] != ' ') {
-                System.out.println(gameField.getGameField()[0][3] + " wins");
+                //System.out.println(gameField.getGameField()[0][3] + " wins");
                 return true;
             }
         }

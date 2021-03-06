@@ -21,6 +21,8 @@ public class Main {
                         playerOne = new PlayerAI(Level.EASY);
                     } else if (line[1].equals("user")) {
                         playerOne = new PlayerHuman(console);
+                    } else if (line[1].equals("medium")) {
+                        playerOne = new PlayerAI(Level.MEDIUM);
                     } else {
                         System.out.println("Bad parameters!");
                         continue;
@@ -29,6 +31,8 @@ public class Main {
                         playerTwo = new PlayerAI(Level.EASY);
                     } else if (line[2].equals("user")) {
                         playerTwo = new PlayerHuman(console);
+                    } else if (line[2].equals("medium")) {
+                        playerTwo = new PlayerAI(Level.MEDIUM);
                     } else {
                         System.out.println("Bad parameters!");
                         continue;
