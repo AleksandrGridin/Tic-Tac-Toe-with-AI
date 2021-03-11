@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.750s</div>
+<div class="counter">3.292s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,99 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="start"></a>
-<h3 class="failures">start</h3>
-<span class="code">
-<pre>java.lang.AssertionError: Wrong answer in test #183
-
-The result of the game between minimax algorithms should be always 'Draw'!
-Make sure your output contains 'Draw'.
-
-Please find below the output of your program during this failed test.
-Note that the '&gt;' character indicates the beginning of the input line.
-
----
-
-Input command: 
-&gt; start hard hard
----------
-|       |
-|       |
-|       |
----------
----------
-| X X O |
-| X O X |
-| X     |
----------
-X wins
-Input command:
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:131)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:119)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -164,13 +78,13 @@ Input command:
 </tr>
 </thead>
 <tr>
-<td class="failures">start</td>
-<td class="failures">1.750s</td>
-<td class="failures">failed</td>
+<td class="success">start</td>
+<td class="success">3.292s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>?[1;31m
@@ -200,41 +114,27 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
+|   O   |
 |   X   |
-|     O |
+|       |
 ---------
 Enter the coordinates: &gt; 1 1
 ---------
-| X     |
+| X O   |
 |   X   |
-|     O |
+|       |
 ---------
-Making move level &quot;easy&quot;
----------
-| X     |
-|   X   |
-|   O O |
----------
-Enter the coordinates: &gt; 3 1
----------
-| X     |
-|   X   |
-| X O O |
----------
-Making move level &quot;easy&quot;
-This cell is occupied! Choose another one!
 Making move level &quot;easy&quot;
 ---------
 | X O   |
-|   X   |
-| X O O |
+| O X   |
+|       |
 ---------
-Enter the coordinates: &gt; 1 3
+Enter the coordinates: &gt; 3 3
 ---------
-| X O X |
-|   X   |
-| X O O |
+| X O   |
+| O X   |
+|     X |
 ---------
 X wins
 Input command: 
@@ -255,7 +155,7 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-| O     |
+|   O   |
 |   X   |
 |       |
 ---------
@@ -278,7 +178,7 @@ Making move level &quot;easy&quot;
 ---------
 |       |
 |   X   |
-| O     |
+|     O |
 ---------
 ?[1;31m
 Start test 5?[0m
@@ -298,8 +198,8 @@ Enter the coordinates: &gt; 2 2
 Making move level &quot;easy&quot;
 ---------
 |       |
-| O X   |
-|       |
+|   X   |
+|   O   |
 ---------
 ?[1;31m
 Start test 6?[0m
@@ -319,32 +219,11 @@ Enter the coordinates: &gt; 2 2
 Making move level &quot;easy&quot;
 ---------
 |       |
-|   X O |
-|       |
+|   X   |
+|   O   |
 ---------
 ?[1;31m
 Start test 7?[0m
-Input command: 
-&gt; start user easy
----------
-|       |
-|       |
-|       |
----------
-Enter the coordinates: &gt; 2 2
----------
-|       |
-|   X   |
-|       |
----------
-Making move level &quot;easy&quot;
----------
-|     O |
-|   X   |
-|       |
----------
-?[1;31m
-Start test 8?[0m
 Input command: 
 &gt; start user easy
 ---------
@@ -365,6 +244,29 @@ Making move level &quot;easy&quot;
 |       |
 ---------
 ?[1;31m
+Start test 8?[0m
+Input command: 
+&gt; start user easy
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;easy&quot;
+---------
+|       |
+|   X   |
+|   O   |
+---------
+?[1;31m
 Start test 9?[0m
 Input command: 
 &gt; start user easy
@@ -381,8 +283,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
-|   X O |
+|   O   |
+|   X   |
 |       |
 ---------
 ?[1;31m
@@ -423,9 +325,9 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
-|   X   |
 |   O   |
+|   X   |
+|       |
 ---------
 ?[1;31m
 Start test 12?[0m
@@ -444,8 +346,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
-|   X O |
+| O     |
+|   X   |
 |       |
 ---------
 ?[1;31m
@@ -465,9 +367,9 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|   O   |
-|   X   |
 |       |
+|   X   |
+|   O   |
 ---------
 ?[1;31m
 Start test 14?[0m
@@ -488,7 +390,7 @@ Making move level &quot;easy&quot;
 ---------
 |       |
 |   X   |
-|   O   |
+| O     |
 ---------
 ?[1;31m
 Start test 15?[0m
@@ -507,7 +409,7 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|     O |
+| O     |
 |   X   |
 |       |
 ---------
@@ -528,8 +430,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
-| O X   |
+|   O   |
+|   X   |
 |       |
 ---------
 ?[1;31m
@@ -551,7 +453,7 @@ Making move level &quot;easy&quot;
 ---------
 |       |
 |   X   |
-| O     |
+|   O   |
 ---------
 ?[1;31m
 Start test 18?[0m
@@ -570,8 +472,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
-|   X O |
+|     O |
+|   X   |
 |       |
 ---------
 ?[1;31m
@@ -593,52 +495,10 @@ Making move level &quot;easy&quot;
 ---------
 |       |
 |   X   |
-| O     |
+|   O   |
 ---------
 ?[1;31m
 Start test 20?[0m
-Input command: 
-&gt; start user easy
----------
-|       |
-|       |
-|       |
----------
-Enter the coordinates: &gt; 2 2
----------
-|       |
-|   X   |
-|       |
----------
-Making move level &quot;easy&quot;
----------
-|       |
-|   X   |
-| O     |
----------
-?[1;31m
-Start test 21?[0m
-Input command: 
-&gt; start user easy
----------
-|       |
-|       |
-|       |
----------
-Enter the coordinates: &gt; 2 2
----------
-|       |
-|   X   |
-|       |
----------
-Making move level &quot;easy&quot;
----------
-|       |
-|   X O |
-|       |
----------
-?[1;31m
-Start test 22?[0m
 Input command: 
 &gt; start user easy
 ---------
@@ -659,7 +519,28 @@ Making move level &quot;easy&quot;
 |       |
 ---------
 ?[1;31m
-Start test 23?[0m
+Start test 21?[0m
+Input command: 
+&gt; start user easy
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;easy&quot;
+---------
+|       |
+|   X   |
+|     O |
+---------
+?[1;31m
+Start test 22?[0m
 Input command: 
 &gt; start user easy
 ---------
@@ -680,6 +561,27 @@ Making move level &quot;easy&quot;
 | O     |
 ---------
 ?[1;31m
+Start test 23?[0m
+Input command: 
+&gt; start user easy
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;easy&quot;
+---------
+| O     |
+|   X   |
+|       |
+---------
+?[1;31m
 Start test 24?[0m
 Input command: 
 &gt; start user easy
@@ -697,8 +599,8 @@ Enter the coordinates: &gt; 2 2
 Making move level &quot;easy&quot;
 ---------
 |       |
-|   X O |
-|       |
+|   X   |
+|     O |
 ---------
 ?[1;31m
 Start test 25?[0m
@@ -717,7 +619,7 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|     O |
+|   O   |
 |   X   |
 |       |
 ---------
@@ -739,8 +641,8 @@ Enter the coordinates: &gt; 2 2
 Making move level &quot;easy&quot;
 ---------
 |       |
-| O X   |
-|       |
+|   X   |
+| O     |
 ---------
 ?[1;31m
 Start test 27?[0m
@@ -759,8 +661,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
-| O X   |
+|   O   |
+|   X   |
 |       |
 ---------
 ?[1;31m
@@ -779,10 +681,12 @@ Enter the coordinates: &gt; 2 2
 |       |
 ---------
 Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;easy&quot;
 ---------
-|       |
+| O     |
 |   X   |
-|   O   |
+|       |
 ---------
 ?[1;31m
 Start test 29?[0m
@@ -801,8 +705,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
-| O X   |
+|     O |
+|   X   |
 |       |
 ---------
 ?[1;31m
@@ -864,12 +768,96 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
-|   X   |
 | O     |
+|   X   |
+|       |
 ---------
 ?[1;31m
 Start test 33?[0m
+Input command: 
+&gt; start user easy
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;easy&quot;
+---------
+|       |
+|   X   |
+|   O   |
+---------
+?[1;31m
+Start test 34?[0m
+Input command: 
+&gt; start user easy
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;easy&quot;
+---------
+|       |
+| O X   |
+|       |
+---------
+?[1;31m
+Start test 35?[0m
+Input command: 
+&gt; start user easy
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;easy&quot;
+---------
+|       |
+|   X   |
+|     O |
+---------
+?[1;31m
+Start test 36?[0m
+Input command: 
+&gt; start user easy
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;easy&quot;
+---------
+|       |
+|   X   |
+|   O   |
+---------
+?[1;31m
+Start test 37?[0m
 Input command: 
 &gt; start user easy
 ---------
@@ -890,92 +878,6 @@ Making move level &quot;easy&quot;
 |       |
 ---------
 ?[1;31m
-Start test 34?[0m
-Input command: 
-&gt; start user easy
----------
-|       |
-|       |
-|       |
----------
-Enter the coordinates: &gt; 2 2
----------
-|       |
-|   X   |
-|       |
----------
-Making move level &quot;easy&quot;
----------
-|       |
-|   X O |
-|       |
----------
-?[1;31m
-Start test 35?[0m
-Input command: 
-&gt; start user easy
----------
-|       |
-|       |
-|       |
----------
-Enter the coordinates: &gt; 2 2
----------
-|       |
-|   X   |
-|       |
----------
-Making move level &quot;easy&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;easy&quot;
----------
-|       |
-|   X   |
-| O     |
----------
-?[1;31m
-Start test 36?[0m
-Input command: 
-&gt; start user easy
----------
-|       |
-|       |
-|       |
----------
-Enter the coordinates: &gt; 2 2
----------
-|       |
-|   X   |
-|       |
----------
-Making move level &quot;easy&quot;
----------
-| O     |
-|   X   |
-|       |
----------
-?[1;31m
-Start test 37?[0m
-Input command: 
-&gt; start user easy
----------
-|       |
-|       |
-|       |
----------
-Enter the coordinates: &gt; 2 2
----------
-|       |
-|   X   |
-|       |
----------
-Making move level &quot;easy&quot;
----------
-| O     |
-|   X   |
-|       |
----------
-?[1;31m
 Start test 38?[0m
 Input command: 
 &gt; start user easy
@@ -992,8 +894,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
-|   X O |
+|   O   |
+|   X   |
 |       |
 ---------
 ?[1;31m
@@ -1013,7 +915,7 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-| O     |
+|     O |
 |   X   |
 |       |
 ---------
@@ -1034,8 +936,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
-|   X O |
+|   O   |
+|   X   |
 |       |
 ---------
 ?[1;31m
@@ -1055,8 +957,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
-| O X   |
+| O     |
+|   X   |
 |       |
 ---------
 ?[1;31m
@@ -1078,7 +980,7 @@ Making move level &quot;easy&quot;
 ---------
 |       |
 |   X   |
-| O     |
+|   O   |
 ---------
 ?[1;31m
 Start test 43?[0m
@@ -1096,8 +998,10 @@ Enter the coordinates: &gt; 2 2
 |       |
 ---------
 Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;easy&quot;
 ---------
-| O     |
+|   O   |
 |   X   |
 |       |
 ---------
@@ -1118,8 +1022,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-| O     |
-|   X   |
+|       |
+| O X   |
 |       |
 ---------
 ?[1;31m
@@ -1183,9 +1087,9 @@ Making move level &quot;easy&quot;
 This cell is occupied! Choose another one!
 Making move level &quot;easy&quot;
 ---------
-|       |
-|   X   |
 | O     |
+|   X   |
+|       |
 ---------
 ?[1;31m
 Start test 48?[0m
@@ -1226,8 +1130,8 @@ Enter the coordinates: &gt; 2 2
 Making move level &quot;easy&quot;
 ---------
 |       |
-|   X O |
-|       |
+|   X   |
+| O     |
 ---------
 ?[1;31m
 Start test 50?[0m
@@ -1267,9 +1171,9 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-| O     |
-|   X   |
 |       |
+|   X   |
+| O     |
 ---------
 ?[1;31m
 Start test 52?[0m
@@ -1288,8 +1192,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|   O   |
-|   X   |
+|       |
+|   X O |
 |       |
 ---------
 ?[1;31m
@@ -1308,12 +1212,10 @@ Enter the coordinates: &gt; 2 2
 |       |
 ---------
 Making move level &quot;easy&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;easy&quot;
 ---------
 |       |
 |   X   |
-|     O |
+| O     |
 ---------
 ?[1;31m
 Start test 54?[0m
@@ -1333,8 +1235,8 @@ Enter the coordinates: &gt; 2 2
 Making move level &quot;easy&quot;
 ---------
 |       |
-| O X   |
-|       |
+|   X   |
+|   O   |
 ---------
 ?[1;31m
 Start test 55?[0m
@@ -1373,10 +1275,14 @@ Enter the coordinates: &gt; 2 2
 |       |
 ---------
 Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;easy&quot;
 ---------
-|       |
+|     O |
 |   X   |
-| O     |
+|       |
 ---------
 ?[1;31m
 Start test 57?[0m
@@ -1395,9 +1301,9 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
+|   O   |
 |   X   |
-|     O |
+|       |
 ---------
 ?[1;31m
 Start test 58?[0m
@@ -1415,8 +1321,10 @@ Enter the coordinates: &gt; 2 2
 |       |
 ---------
 Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;easy&quot;
 ---------
-|   O   |
+| O     |
 |   X   |
 |       |
 ---------
@@ -1437,9 +1345,9 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|   O   |
-|   X   |
 |       |
+|   X   |
+| O     |
 ---------
 ?[1;31m
 Start test 60?[0m
@@ -1459,8 +1367,8 @@ Enter the coordinates: &gt; 2 2
 Making move level &quot;easy&quot;
 ---------
 |       |
-| O X   |
-|       |
+|   X   |
+|   O   |
 ---------
 ?[1;31m
 Start test 61?[0m
@@ -1480,7 +1388,7 @@ Enter the coordinates: &gt; 2 2
 Making move level &quot;easy&quot;
 ---------
 |       |
-| O X   |
+|   X O |
 |       |
 ---------
 ?[1;31m
@@ -1500,9 +1408,9 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
+| O     |
 |   X   |
-|   O   |
+|       |
 ---------
 ?[1;31m
 Start test 63?[0m
@@ -1521,8 +1429,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|     O |
-|   X   |
+|       |
+|   X O |
 |       |
 ---------
 ?[1;31m
@@ -1542,12 +1450,33 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|     O |
-|   X   |
 |       |
+|   X   |
+|     O |
 ---------
 ?[1;31m
 Start test 65?[0m
+Input command: 
+&gt; start user easy
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;easy&quot;
+---------
+|       |
+|   X O |
+|       |
+---------
+?[1;31m
+Start test 66?[0m
 Input command: 
 &gt; start user easy
 ---------
@@ -1566,29 +1495,8 @@ This cell is occupied! Choose another one!
 Making move level &quot;easy&quot;
 ---------
 |       |
-|   X   |
-|     O |
----------
-?[1;31m
-Start test 66?[0m
-Input command: 
-&gt; start user easy
----------
+| O X   |
 |       |
-|       |
-|       |
----------
-Enter the coordinates: &gt; 2 2
----------
-|       |
-|   X   |
-|       |
----------
-Making move level &quot;easy&quot;
----------
-|       |
-|   X   |
-|     O |
 ---------
 ?[1;31m
 Start test 67?[0m
@@ -1609,7 +1517,7 @@ Making move level &quot;easy&quot;
 ---------
 |       |
 |   X   |
-|     O |
+| O     |
 ---------
 ?[1;31m
 Start test 68?[0m
@@ -1628,9 +1536,9 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
+| O     |
 |   X   |
-|   O   |
+|       |
 ---------
 ?[1;31m
 Start test 69?[0m
@@ -1648,10 +1556,12 @@ Enter the coordinates: &gt; 2 2
 |       |
 ---------
 Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;easy&quot;
 ---------
 |       |
-|   X   |
-|   O   |
+| O X   |
+|       |
 ---------
 ?[1;31m
 Start test 70?[0m
@@ -1670,9 +1580,9 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
+|   O   |
 |   X   |
-| O     |
+|       |
 ---------
 ?[1;31m
 Start test 71?[0m
@@ -1691,8 +1601,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|   O   |
-|   X   |
+|       |
+| O X   |
 |       |
 ---------
 ?[1;31m
@@ -1712,7 +1622,7 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|     O |
+|   O   |
 |   X   |
 |       |
 ---------
@@ -1733,7 +1643,7 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|     O |
+| O     |
 |   X   |
 |       |
 ---------
@@ -1756,7 +1666,7 @@ Making move level &quot;easy&quot;
 ---------
 |       |
 |   X   |
-| O     |
+|   O   |
 ---------
 ?[1;31m
 Start test 75?[0m
@@ -1776,7 +1686,7 @@ Enter the coordinates: &gt; 2 2
 Making move level &quot;easy&quot;
 ---------
 |       |
-| O X   |
+|   X O |
 |       |
 ---------
 ?[1;31m
@@ -1817,8 +1727,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|   O   |
-|   X   |
+|       |
+|   X O |
 |       |
 ---------
 ?[1;31m
@@ -1837,12 +1747,10 @@ Enter the coordinates: &gt; 2 2
 |       |
 ---------
 Making move level &quot;easy&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;easy&quot;
 ---------
 |       |
-|   X   |
-|   O   |
+| O X   |
+|       |
 ---------
 ?[1;31m
 Start test 79?[0m
@@ -1861,9 +1769,9 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
-|   X   |
 |     O |
+|   X   |
+|       |
 ---------
 ?[1;31m
 Start test 80?[0m
@@ -1903,7 +1811,7 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|   O   |
+|     O |
 |   X   |
 |       |
 ---------
@@ -1926,7 +1834,7 @@ Making move level &quot;easy&quot;
 ---------
 |       |
 |   X   |
-|   O   |
+| O     |
 ---------
 ?[1;31m
 Start test 83?[0m
@@ -1946,8 +1854,8 @@ Enter the coordinates: &gt; 2 2
 Making move level &quot;easy&quot;
 ---------
 |       |
-|   X O |
-|       |
+|   X   |
+|   O   |
 ---------
 ?[1;31m
 Start test 84?[0m
@@ -1966,8 +1874,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
-|   X O |
+|     O |
+|   X   |
 |       |
 ---------
 ?[1;31m
@@ -2008,9 +1916,9 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|     O |
-|   X   |
 |       |
+|   X   |
+|   O   |
 ---------
 ?[1;31m
 Start test 87?[0m
@@ -2028,10 +1936,8 @@ Enter the coordinates: &gt; 2 2
 |       |
 ---------
 Making move level &quot;easy&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;easy&quot;
 ---------
-| O     |
+|   O   |
 |   X   |
 |       |
 ---------
@@ -2051,10 +1957,12 @@ Enter the coordinates: &gt; 2 2
 |       |
 ---------
 Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;easy&quot;
 ---------
 |       |
-|   X O |
-|       |
+|   X   |
+| O     |
 ---------
 ?[1;31m
 Start test 89?[0m
@@ -2075,7 +1983,7 @@ Making move level &quot;easy&quot;
 ---------
 |       |
 |   X   |
-|   O   |
+|     O |
 ---------
 ?[1;31m
 Start test 90?[0m
@@ -2095,8 +2003,8 @@ Enter the coordinates: &gt; 2 2
 Making move level &quot;easy&quot;
 ---------
 |       |
-|   X O |
-|       |
+|   X   |
+|     O |
 ---------
 ?[1;31m
 Start test 91?[0m
@@ -2115,8 +2023,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
-| O X   |
+| O     |
+|   X   |
 |       |
 ---------
 ?[1;31m
@@ -2156,10 +2064,12 @@ Enter the coordinates: &gt; 2 2
 |       |
 ---------
 Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;easy&quot;
 ---------
-|       |
+|   O   |
 |   X   |
-| O     |
+|       |
 ---------
 ?[1;31m
 Start test 94?[0m
@@ -2177,10 +2087,12 @@ Enter the coordinates: &gt; 2 2
 |       |
 ---------
 Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;easy&quot;
 ---------
 |       |
 |   X   |
-|   O   |
+|     O |
 ---------
 ?[1;31m
 Start test 95?[0m
@@ -2199,8 +2111,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|     O |
-|   X   |
+|       |
+| O X   |
 |       |
 ---------
 ?[1;31m
@@ -2220,8 +2132,8 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|   O   |
-|   X   |
+|       |
+|   X O |
 |       |
 ---------
 ?[1;31m
@@ -2242,8 +2154,8 @@ Enter the coordinates: &gt; 2 2
 Making move level &quot;easy&quot;
 ---------
 |       |
-|   X   |
-|     O |
+| O X   |
+|       |
 ---------
 ?[1;31m
 Start test 98?[0m
@@ -2264,7 +2176,7 @@ Making move level &quot;easy&quot;
 ---------
 |       |
 |   X   |
-| O     |
+|   O   |
 ---------
 ?[1;31m
 Start test 99?[0m
@@ -2283,9 +2195,9 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
+|   O   |
 |   X   |
-|     O |
+|       |
 ---------
 ?[1;31m
 Start test 100?[0m
@@ -2325,9 +2237,9 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|   O   |
-|   X   |
 |       |
+|   X   |
+|     O |
 ---------
 ?[1;31m
 Start test 102?[0m
@@ -2346,9 +2258,9 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;easy&quot;
 ---------
-|       |
+|     O |
 |   X   |
-| O     |
+|       |
 ---------
 ?[1;31m
 Start test 103?[0m
@@ -2368,6 +2280,10 @@ Enter the coordinates: &gt; 2 2
 |       |
 ---------
 Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;easy&quot;
 ---------
 | O     |
 |   X   |
@@ -2382,13 +2298,48 @@ Enter the coordinates: &gt; 1 3
 Making move level &quot;easy&quot;
 This cell is occupied! Choose another one!
 Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;easy&quot;
 ---------
 | O   X |
 |   X   |
-|     O |
+| O     |
 ---------
 ?[1;31m
 Start test 105?[0m
+Input command: 
+&gt; start user easy
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;easy&quot;
+---------
+|       |
+|   X O |
+|       |
+---------
+Enter the coordinates: &gt; 1 1
+---------
+| X     |
+|   X O |
+|       |
+---------
+Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;easy&quot;
+---------
+| X     |
+| O X O |
+|       |
+---------
 ?[1;31m
 Start test 106?[0m
 ?[1;31m
@@ -2459,17 +2410,31 @@ Input command:
 Making move level &quot;easy&quot;
 ---------
 |       |
-|   X   |
 |       |
+|     X |
+---------
+Making move level &quot;easy&quot;
+---------
+|       |
+|   O   |
+|     X |
+---------
+Making move level &quot;easy&quot;
+---------
+|       |
+|   O   |
+| X   X |
 ---------
 Making move level &quot;easy&quot;
 This cell is occupied! Choose another one!
 Making move level &quot;easy&quot;
 ---------
 |       |
-|   X O |
-|       |
+|   O O |
+| X   X |
 ---------
+Making move level &quot;easy&quot;
+This cell is occupied! Choose another one!
 Making move level &quot;easy&quot;
 This cell is occupied! Choose another one!
 Making move level &quot;easy&quot;
@@ -2477,58 +2442,16 @@ This cell is occupied! Choose another one!
 Making move level &quot;easy&quot;
 ---------
 |     X |
-|   X O |
-|       |
----------
-Making move level &quot;easy&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;easy&quot;
----------
-|     X |
-| O X O |
-|       |
+|   O O |
+| X   X |
 ---------
 Making move level &quot;easy&quot;
 ---------
 |     X |
-| O X O |
-|     X |
+| O O O |
+| X   X |
 ---------
-Making move level &quot;easy&quot;
----------
-|     X |
-| O X O |
-|   O X |
----------
-Making move level &quot;easy&quot;
----------
-|   X X |
-| O X O |
-|   O X |
----------
-Making move level &quot;easy&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;easy&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;easy&quot;
----------
-|   X X |
-| O X O |
-| O O X |
----------
-Making move level &quot;easy&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;easy&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;easy&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;easy&quot;
----------
-| X X X |
-| O X O |
-| O O X |
----------
-X wins
+O wins
 Input command: 
 ?[1;31m
 Start test 136?[0m
@@ -2547,21 +2470,21 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;medium&quot;
 ---------
-|       |
+| O     |
 |   X   |
-|     O |
+|       |
 ---------
 Enter the coordinates: &gt; 1 3
 ---------
-|     X |
+| O   X |
 |   X   |
-|     O |
+|       |
 ---------
 Making move level &quot;medium&quot;
 ---------
-|     X |
+| O   X |
 |   X   |
-| O   O |
+| O     |
 ---------
 ?[1;31m
 Start test 137?[0m
@@ -2580,21 +2503,21 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;medium&quot;
 ---------
-|   O   |
-|   X   |
 |       |
+|   X   |
+|   O   |
 ---------
 Enter the coordinates: &gt; 1 1
 ---------
-| X O   |
+| X     |
 |   X   |
-|       |
+|   O   |
 ---------
 Making move level &quot;medium&quot;
 ---------
-| X O   |
+| X     |
 |   X   |
-|     O |
+|   O O |
 ---------
 ?[1;31m
 Start test 138?[0m
@@ -2613,20 +2536,20 @@ Enter the coordinates: &gt; 2 2
 ---------
 Making move level &quot;medium&quot;
 ---------
-|   O   |
-|   X   |
+|       |
+| O X   |
 |       |
 ---------
 Enter the coordinates: &gt; 1 1
 ---------
-| X O   |
-|   X   |
+| X     |
+| O X   |
 |       |
 ---------
 Making move level &quot;medium&quot;
 ---------
-| X O   |
-|   X   |
+| X     |
+| O X   |
 |     O |
 ---------
 ?[1;31m
@@ -2645,24 +2568,22 @@ Enter the coordinates: &gt; 2 2
 |       |
 ---------
 Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
 ---------
 |       |
-|   X   |
-| O     |
+|   X O |
+|       |
 ---------
 Enter the coordinates: &gt; 1 1
 ---------
 | X     |
-|   X   |
-| O     |
+|   X O |
+|       |
 ---------
 Making move level &quot;medium&quot;
 ---------
 | X     |
-|   X   |
-| O   O |
+|   X O |
+|     O |
 ---------
 ?[1;31m
 Start test 140?[0m
@@ -2683,19 +2604,19 @@ Making move level &quot;medium&quot;
 ---------
 |       |
 |   X   |
-| O     |
+|   O   |
 ---------
 Enter the coordinates: &gt; 1 1
 ---------
 | X     |
 |   X   |
-| O     |
+|   O   |
 ---------
 Making move level &quot;medium&quot;
 ---------
 | X     |
 |   X   |
-| O   O |
+|   O O |
 ---------
 ?[1;31m
 Start test 141?[0m
@@ -2715,122 +2636,23 @@ Enter the coordinates: &gt; 2 2
 Making move level &quot;medium&quot;
 ---------
 |       |
-|   X O |
-|       |
+|   X   |
+|     O |
 ---------
-Enter the coordinates: &gt; 1 1
+Enter the coordinates: &gt; 1 3
 ---------
-| X     |
-|   X O |
-|       |
+|     X |
+|   X   |
+|     O |
 ---------
 Making move level &quot;medium&quot;
 ---------
-| X     |
-|   X O |
-|     O |
+|     X |
+|   X   |
+| O   O |
 ---------
 ?[1;31m
 Start test 142?[0m
-Input command: 
-&gt; start user medium
----------
-|       |
-|       |
-|       |
----------
-Enter the coordinates: &gt; 2 2
----------
-|       |
-|   X   |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-|     O |
-|   X   |
-|       |
----------
-Enter the coordinates: &gt; 1 1
----------
-| X   O |
-|   X   |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-| X   O |
-|   X   |
-|     O |
----------
-?[1;31m
-Start test 143?[0m
-Input command: 
-&gt; start user medium
----------
-|       |
-|       |
-|       |
----------
-Enter the coordinates: &gt; 2 2
----------
-|       |
-|   X   |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-|       |
-|   X O |
-|       |
----------
-Enter the coordinates: &gt; 1 1
----------
-| X     |
-|   X O |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-| X     |
-|   X O |
-|     O |
----------
-?[1;31m
-Start test 144?[0m
-Input command: 
-&gt; start user medium
----------
-|       |
-|       |
-|       |
----------
-Enter the coordinates: &gt; 2 2
----------
-|       |
-|   X   |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-|   O   |
-|   X   |
-|       |
----------
-Enter the coordinates: &gt; 1 1
----------
-| X O   |
-|   X   |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-| X O   |
-|   X   |
-|     O |
----------
-?[1;31m
-Start test 145?[0m
 Input command: 
 &gt; start user medium
 ---------
@@ -2865,350 +2687,7 @@ Making move level &quot;medium&quot;
 | O     |
 ---------
 ?[1;31m
-Start test 146?[0m
-Input command: 
-&gt; start medium medium
----------
-|       |
-|       |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-|       |
-| X     |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-| O     |
-| X     |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-| O     |
-| X     |
-| X     |
----------
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
----------
-| O     |
-| X O   |
-| X     |
----------
-Making move level &quot;medium&quot;
----------
-| O     |
-| X O   |
-| X   X |
----------
-Making move level &quot;medium&quot;
----------
-| O     |
-| X O   |
-| X O X |
----------
-Making move level &quot;medium&quot;
----------
-| O X   |
-| X O   |
-| X O X |
----------
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
----------
-| O X O |
-| X O   |
-| X O X |
----------
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
----------
-| O X O |
-| X O X |
-| X O X |
----------
-Draw
-Input command: 
-?[1;31m
-Start test 147?[0m
-Input command: 
-&gt; start medium medium
----------
-|       |
-|       |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-|   X   |
-|       |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-|   X   |
-|       |
-|     O |
----------
-Making move level &quot;medium&quot;
----------
-|   X   |
-|       |
-| X   O |
----------
-Making move level &quot;medium&quot;
----------
-|   X   |
-|   O   |
-| X   O |
----------
-Making move level &quot;medium&quot;
----------
-| X X   |
-|   O   |
-| X   O |
----------
-Making move level &quot;medium&quot;
----------
-| X X O |
-|   O   |
-| X   O |
----------
-Making move level &quot;medium&quot;
----------
-| X X O |
-| X O   |
-| X   O |
----------
-X wins
-Input command: 
-?[1;31m
-Start test 148?[0m
-Input command: 
-&gt; start medium medium
----------
-|       |
-|       |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-|   X   |
-|       |
-|       |
----------
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
----------
-|   X   |
-| O     |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-|   X   |
-| O     |
-|     X |
----------
-Making move level &quot;medium&quot;
----------
-|   X   |
-| O     |
-| O   X |
----------
-Making move level &quot;medium&quot;
----------
-| X X   |
-| O     |
-| O   X |
----------
-Making move level &quot;medium&quot;
----------
-| X X O |
-| O     |
-| O   X |
----------
-Making move level &quot;medium&quot;
----------
-| X X O |
-| O X   |
-| O   X |
----------
-X wins
-Input command: 
-?[1;31m
-Start test 149?[0m
-Input command: 
-&gt; start medium medium
----------
-|       |
-|       |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-|       |
-| X     |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-|       |
-| X     |
-|   O   |
----------
-Making move level &quot;medium&quot;
----------
-|   X   |
-| X     |
-|   O   |
----------
-Making move level &quot;medium&quot;
----------
-|   X   |
-| X O   |
-|   O   |
----------
-Making move level &quot;medium&quot;
----------
-|   X   |
-| X O   |
-|   O X |
----------
-Making move level &quot;medium&quot;
----------
-|   X O |
-| X O   |
-|   O X |
----------
-Making move level &quot;medium&quot;
----------
-|   X O |
-| X O   |
-| X O X |
----------
-Making move level &quot;medium&quot;
----------
-| O X O |
-| X O   |
-| X O X |
----------
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
----------
-| O X O |
-| X O X |
-| X O X |
----------
-Draw
-Input command: 
-?[1;31m
-Start test 150?[0m
-Input command: 
-&gt; start medium medium
----------
-|       |
-|       |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-| X     |
-|       |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-| X     |
-| O     |
-|       |
----------
-Making move level &quot;medium&quot;
----------
-| X     |
-| O     |
-| X     |
----------
-Making move level &quot;medium&quot;
-This cell is occupied! Choose another one!
-Making move level &quot;medium&quot;
----------
-| X     |
-| O   O |
-| X     |
----------
-Making move level &quot;medium&quot;
----------
-| X     |
-| O X O |
-| X     |
----------
-Making move level &quot;medium&quot;
----------
-| X   O |
-| O X O |
-| X     |
----------
-Making move level &quot;medium&quot;
----------
-| X   O |
-| O X O |
-| X   X |
----------
-X wins
-Input command: 
-?[1;31m
-Start test 151?[0m
+Start test 143?[0m
 Input command: 
 &gt; start user medium
 ---------
@@ -3226,14 +2705,499 @@ Making move level &quot;medium&quot;
 ---------
 |       |
 |   X   |
+| O     |
+---------
+Enter the coordinates: &gt; 1 1
+---------
+| X     |
+|   X   |
+| O     |
+---------
+Making move level &quot;medium&quot;
+---------
+| X     |
+|   X   |
+| O   O |
+---------
+?[1;31m
+Start test 144?[0m
+Input command: 
+&gt; start user medium
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;medium&quot;
+---------
+|       |
+|   X   |
+| O     |
+---------
+Enter the coordinates: &gt; 1 1
+---------
+| X     |
+|   X   |
+| O     |
+---------
+Making move level &quot;medium&quot;
+---------
+| X     |
+|   X   |
+| O   O |
+---------
+?[1;31m
+Start test 145?[0m
+Input command: 
+&gt; start user medium
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;medium&quot;
+---------
+|     O |
+|   X   |
+|       |
+---------
+Enter the coordinates: &gt; 1 1
+---------
+| X   O |
+|   X   |
+|       |
+---------
+Making move level &quot;medium&quot;
+---------
+| X   O |
+|   X   |
+|     O |
+---------
+?[1;31m
+Start test 146?[0m
+Input command: 
+&gt; start medium medium
+---------
+|       |
+|       |
+|       |
+---------
+Making move level &quot;medium&quot;
+---------
+| X     |
+|       |
+|       |
+---------
+Making move level &quot;medium&quot;
+---------
+| X     |
 |   O   |
+|       |
+---------
+Making move level &quot;medium&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;medium&quot;
+---------
+| X X   |
+|   O   |
+|       |
+---------
+Making move level &quot;medium&quot;
+---------
+| X X O |
+|   O   |
+|       |
+---------
+Making move level &quot;medium&quot;
+---------
+| X X O |
+|   O   |
+| X     |
+---------
+Making move level &quot;medium&quot;
+---------
+| X X O |
+| O O   |
+| X     |
+---------
+Making move level &quot;medium&quot;
+---------
+| X X O |
+| O O X |
+| X     |
+---------
+Making move level &quot;medium&quot;
+---------
+| X X O |
+| O O X |
+| X O   |
+---------
+Making move level &quot;medium&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;medium&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;medium&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;medium&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;medium&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;medium&quot;
+---------
+| X X O |
+| O O X |
+| X O X |
+---------
+Draw
+Input command: 
+?[1;31m
+Start test 147?[0m
+Input command: 
+&gt; start medium medium
+---------
+|       |
+|       |
+|       |
+---------
+Making move level &quot;medium&quot;
+---------
+|       |
+|       |
+|   X   |
+---------
+Making move level &quot;medium&quot;
+---------
+|       |
+|       |
+| O X   |
+---------
+Making move level &quot;medium&quot;
+---------
+| X     |
+|       |
+| O X   |
+---------
+Making move level &quot;medium&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;medium&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;medium&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;medium&quot;
+---------
+| X     |
+| O     |
+| O X   |
+---------
+Making move level &quot;medium&quot;
+---------
+| X   X |
+| O     |
+| O X   |
+---------
+Making move level &quot;medium&quot;
+---------
+| X O X |
+| O     |
+| O X   |
+---------
+Making move level &quot;medium&quot;
+---------
+| X O X |
+| O X   |
+| O X   |
+---------
+Making move level &quot;medium&quot;
+---------
+| X O X |
+| O X   |
+| O X O |
+---------
+Making move level &quot;medium&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;medium&quot;
+---------
+| X O X |
+| O X X |
+| O X O |
+---------
+Draw
+Input command: 
+?[1;31m
+Start test 148?[0m
+Input command: 
+&gt; start medium medium
+---------
+|       |
+|       |
+|       |
+---------
+Making move level &quot;medium&quot;
+---------
+|       |
+|     X |
+|       |
+---------
+Making move level &quot;medium&quot;
+---------
+|   O   |
+|     X |
+|       |
+---------
+Making move level &quot;medium&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;medium&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;medium&quot;
+---------
+|   O   |
+|     X |
+|     X |
+---------
+Making move level &quot;medium&quot;
+---------
+|   O O |
+|     X |
+|     X |
+---------
+Making move level &quot;medium&quot;
+---------
+| X O O |
+|     X |
+|     X |
+---------
+Making move level &quot;medium&quot;
+---------
+| X O O |
+|   O X |
+|     X |
+---------
+Making move level &quot;medium&quot;
+---------
+| X O O |
+|   O X |
+| X   X |
+---------
+Making move level &quot;medium&quot;
+---------
+| X O O |
+|   O X |
+| X O X |
+---------
+O wins
+Input command: 
+?[1;31m
+Start test 149?[0m
+Input command: 
+&gt; start medium medium
+---------
+|       |
+|       |
+|       |
+---------
+Making move level &quot;medium&quot;
+---------
+|       |
+|       |
+|     X |
+---------
+Making move level &quot;medium&quot;
+---------
+|   O   |
+|       |
+|     X |
+---------
+Making move level &quot;medium&quot;
+---------
+|   O   |
+|   X   |
+|     X |
+---------
+Making move level &quot;medium&quot;
+---------
+| O O   |
+|   X   |
+|     X |
+---------
+Making move level &quot;medium&quot;
+---------
+| O O X |
+|   X   |
+|     X |
+---------
+Making move level &quot;medium&quot;
+---------
+| O O X |
+|   X O |
+|     X |
+---------
+Making move level &quot;medium&quot;
+---------
+| O O X |
+|   X O |
+| X   X |
+---------
+X wins
+Input command: 
+?[1;31m
+Start test 150?[0m
+Input command: 
+&gt; start medium medium
+---------
+|       |
+|       |
+|       |
+---------
+Making move level &quot;medium&quot;
+---------
+|       |
+|       |
+|   X   |
+---------
+Making move level &quot;medium&quot;
+---------
+|       |
+|       |
+| O X   |
+---------
+Making move level &quot;medium&quot;
+---------
+|   X   |
+|       |
+| O X   |
+---------
+Making move level &quot;medium&quot;
+---------
+|   X   |
+|   O   |
+| O X   |
+---------
+Making move level &quot;medium&quot;
+---------
+|   X X |
+|   O   |
+| O X   |
+---------
+Making move level &quot;medium&quot;
+---------
+| O X X |
+|   O   |
+| O X   |
+---------
+Making move level &quot;medium&quot;
+---------
+| O X X |
+| X O   |
+| O X   |
+---------
+Making move level &quot;medium&quot;
+---------
+| O X X |
+| X O   |
+| O X O |
+---------
+O wins
+Input command: 
+?[1;31m
+Start test 151?[0m
+Input command: 
+&gt; start user medium
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;medium&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;medium&quot;
+---------
+|     O |
+|   X   |
+|       |
 ---------
 ?[1;31m
 Start test 152?[0m
+Input command: 
+&gt; start user medium
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;medium&quot;
+This cell is occupied! Choose another one!
+Making move level &quot;medium&quot;
+---------
+|       |
+|   X   |
+|     O |
+---------
 ?[1;31m
 Start test 153?[0m
+Input command: 
+&gt; start user medium
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;medium&quot;
+---------
+|       |
+|   X   |
+| O     |
+---------
 ?[1;31m
 Start test 154?[0m
+Input command: 
+&gt; start user medium
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: &gt; 2 2
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;medium&quot;
+---------
+|       |
+|   X O |
+|       |
+---------
 ?[1;31m
 Start test 155?[0m
 ?[1;31m
@@ -3303,13 +3267,55 @@ Enter the coordinates: &gt; 1 1
 |       |
 |       |
 ---------
-This cell is occupied! Choose another one!
+Making move level &quot;hard&quot;
 ---------
-| X O O |
+| X     |
+|   O   |
+|       |
+---------
+Enter the coordinates: &gt; 1 2
+---------
+| X X   |
+|   O   |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+| X X O |
+|   O   |
+|       |
+---------
+Enter the coordinates: &gt; 3 1
+---------
+| X X O |
+|   O   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| X X O |
+| O O   |
+| X     |
+---------
+Enter the coordinates: &gt; 2 3
+---------
+| X X O |
+| O O X |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| X X O |
+| O O X |
+| X O   |
+---------
+Enter the coordinates: &gt; 3 3
+---------
+| X X O |
+| O O X |
 | X O X |
-| O     |
 ---------
-O wins
+Draw
 Input command: 
 ?[1;31m
 Start test 183?[0m
@@ -3320,12 +3326,321 @@ Input command:
 |       |
 |       |
 ---------
+Making move level &quot;hard&quot;
 ---------
-| X X O |
-| X O X |
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+| O     |
+|   X   |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+| O     |
+|   X   |
 | X     |
 ---------
-X wins
+Making move level &quot;hard&quot;
+---------
+| O   O |
+|   X   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+|   X   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+|   X   |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X   |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X O |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X O |
+| X O X |
+---------
+Draw
+Input command: 
+?[1;31m
+Start test 184?[0m
+Input command: 
+&gt; start hard hard
+---------
+|       |
+|       |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+| O     |
+|   X   |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+| O     |
+|   X   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| O   O |
+|   X   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+|   X   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+|   X   |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X   |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X O |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X O |
+| X O X |
+---------
+Draw
+Input command: 
+?[1;31m
+Start test 185?[0m
+Input command: 
+&gt; start hard hard
+---------
+|       |
+|       |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+| O     |
+|   X   |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+| O     |
+|   X   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| O   O |
+|   X   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+|   X   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+|   X   |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X   |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X O |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X O |
+| X O X |
+---------
+Draw
+Input command: 
+?[1;31m
+Start test 186?[0m
+Input command: 
+&gt; start hard hard
+---------
+|       |
+|       |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+| O     |
+|   X   |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+| O     |
+|   X   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| O   O |
+|   X   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+|   X   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+|   X   |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X   |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X O |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X O |
+| X O X |
+---------
+Draw
+Input command: 
+?[1;31m
+Start test 187?[0m
+Input command: 
+&gt; start hard hard
+---------
+|       |
+|       |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+|       |
+|   X   |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+| O     |
+|   X   |
+|       |
+---------
+Making move level &quot;hard&quot;
+---------
+| O     |
+|   X   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| O   O |
+|   X   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+|   X   |
+| X     |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+|   X   |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X   |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X O |
+| X O   |
+---------
+Making move level &quot;hard&quot;
+---------
+| O X O |
+| X X O |
+| X O X |
+---------
+Draw
 Input command: 
 </pre>
 </span>
@@ -3338,7 +3653,7 @@ Input command:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.6.1</a> at Mar 10, 2021, 3:38:36 PM</p>
+<a href="http://www.gradle.org">Gradle 6.6.1</a> at Mar 11, 2021, 8:34:26 PM</p>
 </div>
 </div>
 </body>

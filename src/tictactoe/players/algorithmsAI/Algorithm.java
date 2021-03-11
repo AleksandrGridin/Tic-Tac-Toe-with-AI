@@ -18,4 +18,20 @@ public abstract class Algorithm {
         int two = (random.nextInt(3) + 1) - 1;
         return new int[] {one, two};
     }
+
+    protected int[] checkIfStepCanWin(char symbol) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (gameField.getGameField()[i][j] == ' ') {
+                    gameField.getGameField()[i][j] = symbol;
+                    if (checker.checkResult()) {
+                        gameField.getGameField()[i][j] = ' ';
+                        return new int[]{i, j};
+                    }
+                    gameField.getGameField()[i][j] = ' ';
+                }
+            }
+        }
+        return null;
+    }
 }

@@ -1,33 +1,35 @@
-tictactoe/players/algorithmsAI/MediumAlgorithm.java
- tictactoe.players.algorithmsAI.MediumAlgorithm
-tictactoe/Checker.java
- tictactoe.Checker
-tictactoe/players/algorithmsAI/EasyAlgorithm.java
- tictactoe.players.algorithmsAI.EasyAlgorithm
-tictactoe/players/PlayerAI.java
- tictactoe.players.PlayerAI
- tictactoe.players.PlayerAI$1
-tictactoe/Console.java
- tictactoe.Console
-tictactoe/GameField.java
- tictactoe.GameField
-tictactoe/Menu.java
- tictactoe.Menu
 tictactoe/players/Level.java
  tictactoe.players.Level
-tictactoe/players/algorithmsAI/HardAlgorithm.java
- tictactoe.players.algorithmsAI.HardAlgorithm
+tictactoe/Checker.java
+ tictactoe.Checker
 tictactoe/exception/BadParameters.java
  tictactoe.exception.BadParameters
 tictactoe/exception/CellOccupied.java
  tictactoe.exception.CellOccupied
+tictactoe/Console.java
+ tictactoe.Console
+tictactoe/GameField.java
+ tictactoe.GameField
 tictactoe/players/algorithmsAI/Algorithm.java
  tictactoe.players.algorithmsAI.Algorithm
 tictactoe/players/PlayerHuman.java
  tictactoe.players.PlayerHuman
+tictactoe/players/algorithmsAI/EasyAlgorithm.java
+ tictactoe.players.algorithmsAI.EasyAlgorithm
+tictactoe/Menu.java
+ tictactoe.Menu
 tictactoe/Main.java
  tictactoe.Main
-tictactoe/players/Player.java
- tictactoe.players.Player
 tictactoe/Game.java
  tictactoe.Game
+tictactoe/players/algorithmsAI/MediumAlgorithm.java
+ tictactoe.players.algorithmsAI.MediumAlgorithm
+tictactoe/players/Player.java
+ tictactoe.players.Player
+tictactoe/players/algorithmsAI/Node.java
+ tictactoe.players.algorithmsAI.Node
+tictactoe/players/PlayerAI.java
+ tictactoe.players.PlayerAI
+ tictactoe.players.PlayerAI$1
+tictactoe/players/algorithmsAI/HardAlgorithm.java
+ tictactoe.players.algorithmsAI.HardAlgorithm
