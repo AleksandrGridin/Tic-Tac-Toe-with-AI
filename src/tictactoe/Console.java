@@ -9,4 +9,8 @@ public class Console {
     public String readFromConsole() {
         return scanner.nextLine();
     }
+
+    public void writeMessage(String message) {
+        System.out.print(message + "\n");
+    }
 }

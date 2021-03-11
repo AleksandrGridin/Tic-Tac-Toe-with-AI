@@ -1,12 +1,19 @@
 package tictactoe;
 
-public class CheckerOfWin {
+public class Checker {
+
     private GameField gameField;
 
-    public CheckerOfWin(GameField gameField) {
+    public Checker(GameField gameField) {
         this.gameField = gameField;
     }
+
     public boolean checkResult() {
+        return checkLinesHor() || checkLinesVer() || checkDiog();
+    }
+
+    public boolean checkResult(char[][] current) {
+        gameField.setGameField(current);
         return checkLinesHor() || checkLinesVer() || checkDiog();
     }
 
@@ -14,7 +21,6 @@ public class CheckerOfWin {
         for (char[] chars : gameField.getGameField()) {
             String line = String.copyValueOf(chars);
             if (line.equals("XXX") || line.equals("OOO")) {
-                //System.out.println(line.charAt(0) + " wins");
                 return true;
             }
         }
@@ -32,7 +38,6 @@ public class CheckerOfWin {
             }
             if (lineO[i] == line1[i]
                     && lineO[i] == line2[i]) {
-                //System.out.println(lineO[i] + " wins");
                 return true;
             }
         }
@@ -45,7 +50,6 @@ public class CheckerOfWin {
                 && gameField.getGameField()[0][0]
                 == gameField.getGameField()[2][2]) {
             if (gameField.getGameField()[0][0] != ' ') {
-                //System.out.println(gameField.getGameField()[0][0] + " wins");
                 return true;
             }
         }
@@ -54,7 +58,6 @@ public class CheckerOfWin {
                 && gameField.getGameField()[0][2]
                 == gameField.getGameField()[2][0]) {
             if (gameField.getGameField()[0][2] != ' ') {
-                //System.out.println(gameField.getGameField()[0][3] + " wins");
                 return true;
             }
         }

@@ -4,14 +4,18 @@ import java.util.Arrays;
 
 public class GameField {
 
-    private final char[][] gameField = new char[3][3];
+    private char[][] gameField = new char[3][3];
 
     public GameField() {
         for (char[] chars : gameField) {
             Arrays.fill(chars, ' ');
         }
-        print();
     }
+
+    public void setGameField(char[][] gameField) {
+        this.gameField = gameField;
+    }
+
     public char[][] getGameField() {
         return gameField;
     }
@@ -30,6 +34,12 @@ public class GameField {
             System.out.println("|");
         }
         System.out.println("---------");
+    }
+
+    public void cleanField() {
+        for (char[] chars : gameField) {
+            Arrays.fill(chars, ' ');
+        }
     }
 
 }

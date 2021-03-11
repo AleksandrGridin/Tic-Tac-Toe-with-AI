@@ -2,5 +2,6 @@ package tictactoe.players;
 
 public enum Level {
     EASY,
-    MEDIUM;
+    MEDIUM,
+    HARD;
 }

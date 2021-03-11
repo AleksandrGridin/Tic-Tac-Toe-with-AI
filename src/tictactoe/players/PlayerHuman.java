@@ -1,23 +1,11 @@
 package tictactoe.players;
 
 import tictactoe.Console;
+import tictactoe.Main;
 
 public class PlayerHuman extends Player {
 
-    Console console;
-    private char valueX;
-
-    public PlayerHuman(Console console) {
-        this.console = console;
-    }
-
-    public char getValue() {
-        return valueX;
-    }
-
-    public void setValue(char valueX) {
-        this.valueX = valueX;
-    }
+    Console console = Main.console;
 
     public int[] doStep() {
         System.out.print("Enter the coordinates: ");

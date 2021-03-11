@@ -1,18 +1,33 @@
-tictactoe/Console.java
- tictactoe.Console
-tictactoe/players/Level.java
- tictactoe.players.Level
-tictactoe/GameField.java
- tictactoe.GameField
-tictactoe/players/Player.java
- tictactoe.players.Player
-tictactoe/players/PlayerHuman.java
- tictactoe.players.PlayerHuman
-tictactoe/CheckerOfWin.java
- tictactoe.CheckerOfWin
-tictactoe/Main.java
- tictactoe.Main
+tictactoe/players/algorithmsAI/MediumAlgorithm.java
+ tictactoe.players.algorithmsAI.MediumAlgorithm
+tictactoe/Checker.java
+ tictactoe.Checker
+tictactoe/players/algorithmsAI/EasyAlgorithm.java
+ tictactoe.players.algorithmsAI.EasyAlgorithm
 tictactoe/players/PlayerAI.java
  tictactoe.players.PlayerAI
+ tictactoe.players.PlayerAI$1
+tictactoe/Console.java
+ tictactoe.Console
+tictactoe/GameField.java
+ tictactoe.GameField
+tictactoe/Menu.java
+ tictactoe.Menu
+tictactoe/players/Level.java
+ tictactoe.players.Level
+tictactoe/players/algorithmsAI/HardAlgorithm.java
+ tictactoe.players.algorithmsAI.HardAlgorithm
+tictactoe/exception/BadParameters.java
+ tictactoe.exception.BadParameters
+tictactoe/exception/CellOccupied.java
+ tictactoe.exception.CellOccupied
+tictactoe/players/algorithmsAI/Algorithm.java
+ tictactoe.players.algorithmsAI.Algorithm
+tictactoe/players/PlayerHuman.java
+ tictactoe.players.PlayerHuman
+tictactoe/Main.java
+ tictactoe.Main
+tictactoe/players/Player.java
+ tictactoe.players.Player
 tictactoe/Game.java
  tictactoe.Game

@@ -1,69 +1,76 @@
 package tictactoe;
 
-import tictactoe.players.Level;
+import tictactoe.exception.CellOccupied;
 import tictactoe.players.Player;
-import tictactoe.players.PlayerAI;
-import tictactoe.players.PlayerHuman;
 
 public class Game {
 
-    private GameField gameField = new GameField();
-    private Player playerOne;
-    private Player playerTwo;
-    private Player currentPlayer;
+    public static final GameField gameField = new GameField();
+    public static final Checker checker = new Checker(gameField);
 
-    private final Console console;
-    private CheckerOfWin checkerOfWin;
-
+    private final Player playerOne;
+    private final Player playerTwo;
+    private final Console console = Main.console;
 
 
-    public Game(Console console, Player playerOne, Player playerTwo) {
-        this.console = console;
+    public Game(Player playerOne, Player playerTwo) {
         this.playerOne = playerOne;
         this.playerTwo = playerTwo;
-        checkerOfWin = new CheckerOfWin(gameField);
+        initPlayers();
+    }
+
+    private void initPlayers() {
+        playerOne.setSymbol('X');
+        playerTwo.setSymbol('O');
+        gameField.print();
     }
 
     public void startGame() {
-        if (playerOne instanceof PlayerAI) {
-            ((PlayerAI) playerOne).setGameField(gameField);
-            ((PlayerAI) playerOne).setCheckerOfWin(checkerOfWin);
-        }
-        if (playerTwo instanceof PlayerAI) {
-            ((PlayerAI) playerTwo).setCheckerOfWin(checkerOfWin);
-            ((PlayerAI) playerTwo).setGameField(gameField);
-        }
-        int i = 1;
+        int currentStepOfTheGame = 1;
         while (true) {
+
             try {
-               currentPlayer = i % 2 == 0 ? playerTwo : playerOne;
+                Player currentPlayer = currentStepOfTheGame % 2 == 0 ? playerTwo : playerOne;
 
-               int[] getStepFromPlayer = currentPlayer.doStep();
-               int one = getStepFromPlayer[0];
-               int two = getStepFromPlayer[1];
+                int[] getStepFromPlayer = currentPlayer.doStep();
+                int one = getStepFromPlayer[0];
+                int two = getStepFromPlayer[1];
 
-
-               if (gameField.getGameField()[one][two] == ' ') {
-                    gameField.getGameField()[one][two] = currentPlayer.getValue();
-                    gameField.print();
-                    if (checkerOfWin.checkResult()) {
-                        System.out.println(currentPlayer.getValue() + " wins");
-                        break;
-                    }
-                } else {
-                    System.out.println("This cell is occupied! Choose another one!");
-                    continue;
+                checkTurn(currentPlayer, one, two);
+                gameField.print();
+                if (currentPlayer.isWin()) {
+                    gameField.cleanField();
+                    break;
                 }
-                i++;
-                if (i == 10) {
-                    System.out.println("Draw");
+                currentStepOfTheGame++;
+                if (isDraw(currentStepOfTheGame)) {
+                    gameField.cleanField();
                     break;
                 }
             } catch (IndexOutOfBoundsException e) {
-                System.out.println("Coordinates should be from 1 to 3!");
+                console.writeMessage("Coordinates should be from 1 to 3!");
             } catch (NumberFormatException e) {
-                System.out.println("You should enter numbers!");
+                console.writeMessage("You should enter numbers!");
+            } catch (CellOccupied cellOccupied) {
+                console.writeMessage("This cell is occupied! Choose another one!");
             }
         }
     }
+
+    private void checkTurn(Player currentPlayer, int one, int two) throws CellOccupied {
+        if (gameField.getGameField()[one][two] == ' ') {
+            gameField.getGameField()[one][two] = currentPlayer.getSymbol();
+        } else {
+            throw new CellOccupied();
+        }
+    }
+
+    private boolean isDraw(int currentStepOfTheGame) {
+        if (currentStepOfTheGame == 10) {
+            System.out.println("Draw");
+            return true;
+        }
+        return false;
+    }
+
 }
